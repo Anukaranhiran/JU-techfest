@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Blocked by ScamShield</title>
+</head>
+<body class="verdict-page">
+  <div class="card" style="max-width:620px;width:100%">
+    <span id="badge" class="badge high">HIGH RISK</span>
+    <h1 id="headline">ScamShield stopped this page</h1>
+    <p class="muted" id="subline">The destination was held before it could render.</p>
+
+    <div class="url" id="url">…</div>
+    <div class="score"><i id="scorebar" style="width:0%"></i></div>
+    <p class="muted" id="score">risk 0/100</p>
+
+    <div id="evidence"></div>
+    <div id="limitations"></div>
+
+    <div class="actions">
+      <button id="closed" class="primary">Keep it closed</button>
+      <button id="open" class="ghost">Open anyway</button>
+    </div>
+    <p class="muted" style="font-size:11px;margin-top:12px">
+      “Open anyway” records your explicit bypass in ScamShield’s local history and stops blocking this domain.
+      Only continue if you know the sender.
+    </p>
+  </div>
+  <script src="block.js"></script>
+</body>
+</html>

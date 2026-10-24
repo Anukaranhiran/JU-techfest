@@ -1,0 +1,231 @@
+{
+  "ai" : "Not requested",
+  "bodyBytes" : 2036,
+  "date" : "2026-10-23T21:35:06Z",
+  "final" : {
+    "analyzedURL" : "https:\/\/pjz22i41in.loclx.io\/",
+    "checks" : [
+      {
+        "detail" : "Scheme, authority, port, userinfo, path and query parsed as https:\/\/pjz22i41in.loclx.io.",
+        "name" : "URL parsing",
+        "state" : "passed"
+      },
+      {
+        "detail" : "Typosquatting, homographs, deceptive subdomains, encoding, ports and file names checked.",
+        "name" : "URL structure heuristics",
+        "state" : "passed"
+      },
+      {
+        "detail" : "LocalXpose ephemeralTunnel endpoint",
+        "name" : "Relay \/ dynamic-DNS detection",
+        "state" : "passed"
+      },
+      {
+        "detail" : "No VirusTotal API key configured. This is not a clean result.",
+        "name" : "External reputation",
+        "state" : "skipped"
+      },
+      {
+        "detail" : "Fetched HTTP 404; forms, visible text, script references and links were inspected.",
+        "name" : "Page content inspection",
+        "state" : "failed"
+      },
+      {
+        "detail" : "0 redirect(s); final destination https:\/\/pjz22i41in.loclx.io\/.",
+        "name" : "Redirect chain",
+        "state" : "passed"
+      },
+      {
+        "detail" : "HTTP 404 after 0 redirect(s).",
+        "name" : "Initial request",
+        "state" : "passed"
+      },
+      {
+        "detail" : "Every hop stayed on an allowed public destination.",
+        "name" : "Redirect safety",
+        "state" : "passed"
+      },
+      {
+        "detail" : "HTTP 404: the page did not return inspectable content.",
+        "name" : "Page content available",
+        "state" : "failed"
+      },
+      {
+        "detail" : "HTTP 404, 2036 bytes, 810.0 ms.",
+        "name" : "Page fetch",
+        "state" : "passed"
+      },
+      {
+        "detail" : "0 form(s); password: false; payment: false.",
+        "name" : "Form inspection",
+        "state" : "passed"
+      },
+      {
+        "detail" : "JavaScript was deliberately not executed. Dynamic content is unseen.",
+        "name" : "Script execution",
+        "state" : "skipped"
+      },
+      {
+        "detail" : "0 referenced external host(s) read from markup; no request was made to them except the page itself.",
+        "name" : "Third-party requests",
+        "state" : "passed"
+      },
+      {
+        "detail" : "The server returned an error page, so content-based clearance is impossible.",
+        "name" : "Trustworthy content",
+        "state" : "failed"
+      }
+    ],
+    "confidence" : "medium",
+    "createdAt" : "2026-10-23T21:35:04Z",
+    "durationMs" : 4.384040832519531,
+    "evidence" : [
+      {
+        "category" : "domain",
+        "code" : "host.ephemeral-tunnel",
+        "detail" : "This is a temporary relay endpoint on LocalXpose (loclx.io). Tunnel hostnames are issued to anyone in seconds, are reused, and the content behind them can change without the URL changing. A structure-only check cannot establish what is served here. Treat the destination as unverified until the page itself is inspected or a reputation provider returns a result.",
+        "title" : "Temporary relay endpoint (LocalXpose)",
+        "weight" : 22
+      },
+      {
+        "category" : "structure",
+        "code" : "host.generated-subdomain",
+        "detail" : "The left-most label looks randomly generated, which is how tunnel services allocate throw-away endpoints.",
+        "title" : "Machine-generated relay hostname",
+        "weight" : 6
+      },
+      {
+        "category" : "content",
+        "code" : "page.http-error",
+        "detail" : "The server answered with an error status, so the real page content was not available. This is an unavailable check, not a clearance.",
+        "title" : "Page returned HTTP 404",
+        "weight" : 0
+      }
+    ],
+    "evidenceSources" : [
+      "Local heuristics",
+      "Redirect trace",
+      "Page inspection"
+    ],
+    "host" : "pjz22i41in.loclx.io",
+    "id" : "082AD84D-5749-439B-8D9A-C6B55F99B3A4",
+    "input" : "https:\/\/pjz22i41in.loclx.io",
+    "kind" : "url",
+    "limitations" : [
+      "The host is a LocalXpose endpoint, not a permanent domain. Its content can be changed or reused by whoever created it.",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL\/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "The final destination returned HTTP 404. The page may be offline or already taken down.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: 404 TUNNEL NOT FOUND"
+    ],
+    "recommendedAction" : "ScamShield could not verify this destination: the checks that would confirm safety were unavailable, skipped, or the host is temporary. Do not treat this as safe. Open it only if you can verify the sender independently, and never enter credentials.",
+    "registrableDomain" : "loclx.io",
+    "riskLevel" : "inconclusive",
+    "riskScore" : 28,
+    "skippedChecks" : [
+      "External reputation (not configured)",
+      "Domain registration age",
+      "Redirect chain after opening",
+      "External reputation (not configured)",
+      "External reputation (not configured)"
+    ],
+    "status" : "complete"
+  },
+  "finalURL" : "https:\/\/pjz22i41in.loclx.io\/",
+  "forms" : [
+
+  ],
+  "httpStatus" : 404,
+  "local" : {
+    "analyzedURL" : "https:\/\/pjz22i41in.loclx.io\/",
+    "checks" : [
+      {
+        "detail" : "Scheme, authority, port, userinfo, path and query parsed as https:\/\/pjz22i41in.loclx.io.",
+        "name" : "URL parsing",
+        "state" : "passed"
+      },
+      {
+        "detail" : "Typosquatting, homographs, deceptive subdomains, encoding, ports and file names checked.",
+        "name" : "URL structure heuristics",
+        "state" : "passed"
+      },
+      {
+        "detail" : "LocalXpose ephemeralTunnel endpoint",
+        "name" : "Relay \/ dynamic-DNS detection",
+        "state" : "passed"
+      },
+      {
+        "detail" : "No reputation provider is configured. This is not a clean result.",
+        "name" : "External reputation",
+        "state" : "skipped"
+      },
+      {
+        "detail" : "Not part of a structure-only scan; enable a live check to inspect forms and text.",
+        "name" : "Page content inspection",
+        "state" : "skipped"
+      },
+      {
+        "detail" : "No request was made, so server-side redirects are unknown.",
+        "name" : "Redirect chain",
+        "state" : "skipped"
+      }
+    ],
+    "confidence" : "medium",
+    "createdAt" : "2026-10-23T21:35:04Z",
+    "durationMs" : 4.384040832519531,
+    "evidence" : [
+      {
+        "category" : "domain",
+        "code" : "host.ephemeral-tunnel",
+        "detail" : "This is a temporary relay endpoint on LocalXpose (loclx.io). Tunnel hostnames are issued to anyone in seconds, are reused, and the content behind them can change without the URL changing. A structure-only check cannot establish what is served here. Treat the destination as unverified until the page itself is inspected or a reputation provider returns a result.",
+        "title" : "Temporary relay endpoint (LocalXpose)",
+        "weight" : 22
+      },
+      {
+        "category" : "structure",
+        "code" : "host.generated-subdomain",
+        "detail" : "The left-most label looks randomly generated, which is how tunnel services allocate throw-away endpoints.",
+        "title" : "Machine-generated relay hostname",
+        "weight" : 6
+      }
+    ],
+    "evidenceSources" : [
+      "Local heuristics"
+    ],
+    "host" : "pjz22i41in.loclx.io",
+    "id" : "082AD84D-5749-439B-8D9A-C6B55F99B3A4",
+    "input" : "https:\/\/pjz22i41in.loclx.io",
+    "kind" : "url",
+    "limitations" : [
+      "The host is a LocalXpose endpoint, not a permanent domain. Its content can be changed or reused by whoever created it.",
+      "Static analysis only: ScamShield never visits the destination, so page content, forms and redirects after landing are unseen.",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL\/text, not proof of intent."
+    ],
+    "recommendedAction" : "Open only if you expected this link. If you continue, type nothing and do not sign in until you have confirmed the site independently.",
+    "registrableDomain" : "loclx.io",
+    "riskLevel" : "medium",
+    "riskScore" : 28,
+    "skippedChecks" : [
+      "External reputation (not configured)",
+      "Domain registration age",
+      "Redirect chain after opening"
+    ],
+    "status" : "complete"
+  },
+  "redirects" : [
+
+  ],
+  "reputation" : "All providers explicitly disabled for local detection verification",
+  "scriptPatterns" : [
+
+  ],
+  "staticText" : "404 TUNNEL NOT FOUND 404 TUNNEL NOT FOUND",
+  "title" : "404 TUNNEL NOT FOUND",
+  "truncated" : false,
+  "verdict" : "INCONCLUSIVE"
+}

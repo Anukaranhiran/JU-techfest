@@ -1,0 +1,570 @@
+{
+  "visit_button_lookalike_structure_only": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "exit": 0,
+    "riskLevel": "low",
+    "riskScore": 12,
+    "confidence": "low",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "evidence": [
+      {
+        "code": "path.encoding",
+        "weight": 6,
+        "title": "Heavily percent-encoded"
+      },
+      {
+        "code": "url.length",
+        "weight": 6,
+        "title": "Very long URL"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "skipped",
+        "detail": "Not part of a structure-only scan; enable a live check to inspect forms and text."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "skipped",
+        "detail": "No request was made, so server-side redirects are unknown."
+      }
+    ],
+    "limitations": [
+      "Static analysis only: ScamShield never visits the destination, so page content, forms and redirects after landing are unseen.",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent."
+    ]
+  },
+  "visit_button_lookalike_live": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "exit": 2,
+    "riskLevel": "critical",
+    "riskScore": 75,
+    "confidence": "high",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "evidence": [
+      {
+        "code": "path.encoding",
+        "weight": 6,
+        "title": "Heavily percent-encoded"
+      },
+      {
+        "code": "url.length",
+        "weight": 6,
+        "title": "Very long URL"
+      },
+      {
+        "code": "page.text.reward",
+        "weight": 8,
+        "title": "Page text: Unexpected reward or refund"
+      },
+      {
+        "code": "page.brand-mention",
+        "weight": 6,
+        "title": "Unofficial page mentions Meta"
+      },
+      {
+        "code": "page.misleading-visit-label",
+        "weight": 22,
+        "title": "\u201cVisit Instagram\u201d leads to instagram-verification.example"
+      },
+      {
+        "code": "page.destination.brand.exactTokenWrongDomain",
+        "weight": 16,
+        "title": "Navigation destination: Impersonates Meta"
+      },
+      {
+        "code": "page.destination.brand.comboSuffix",
+        "weight": 11,
+        "title": "Navigation destination: Impersonates Meta"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "passed",
+        "detail": "HTTP 200; static HTML forms and text inspected."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "passed",
+        "detail": "0 redirect(s); final destination https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi"
+      },
+      {
+        "name": "Destination \u00b7 instagram-verification.example",
+        "state": "unavailable",
+        "detail": "The destination could not be fetched, so its content was not verified."
+      }
+    ],
+    "limitations": [
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Instagram Giveaway",
+      "1 discovered destination(s) could not be inspected; an unreachable destination is unknown, not safe.",
+      "A discovered destination could not be inspected: https://instagram-verification.example/claim. It is unverified, not safe.",
+      "The page links to 1 external host(s) that were not fetched: instagram-verification.example."
+    ]
+  },
+  "javascript_destination_live": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlJld2FyZCBjZW50cmU8L3RpdGxlPjwvaGVhZD48Ym9keT48cD5QcmVwYXJpbmcgeW91ciByZXdhcmQuPC9wPjxzY3JpcHQ%2Bd2luZG93LmxvY2F0aW9uLnJlcGxhY2UoImh0dHBzOi8vcGF5cGFsLWFjY291bnQtY2hlY2suZXhhbXBsZS9sb2dpbiIpOzwvc2NyaXB0PjwvYm9keT48L2h0bWw%2B",
+    "exit": 2,
+    "riskLevel": "high",
+    "riskScore": 50,
+    "confidence": "medium",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlJld2FyZCBjZW50cmU8L3RpdGxlPjwvaGVhZD48Ym9keT48cD5QcmVwYXJpbmcgeW91ciByZXdhcmQuPC9wPjxzY3JpcHQ%2Bd2luZG93LmxvY2F0aW9uLnJlcGxhY2UoImh0dHBzOi8vcGF5cGFsLWFjY291bnQtY2hlY2suZXhhbXBsZS9sb2dpbiIpOzwvc2NyaXB0PjwvYm9keT48L2h0bWw%2B",
+    "evidence": [
+      {
+        "code": "url.length",
+        "weight": 6,
+        "title": "Very long URL"
+      },
+      {
+        "code": "page.concealed-navigation",
+        "weight": 12,
+        "title": "Navigation destination hidden in page code"
+      },
+      {
+        "code": "page.destination.brand.exactTokenWrongDomain",
+        "weight": 16,
+        "title": "Navigation destination: Impersonates PayPal"
+      },
+      {
+        "code": "page.destination.brand.comboSuffix",
+        "weight": 11,
+        "title": "Navigation destination: Impersonates PayPal"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "passed",
+        "detail": "HTTP 200; static HTML forms and text inspected."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "passed",
+        "detail": "0 redirect(s); final destination https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlJld2FyZCBjZW50cmU8L3RpdGxlPjwvaGVhZD48Ym9keT48cD5QcmVwYXJpbmcgeW91ciByZXdhcmQuPC9wPjxzY3JpcHQ%2Bd2luZG93LmxvY2F0aW9uLnJlcGxhY2UoImh0dHBzOi8vcGF5cGFs"
+      },
+      {
+        "name": "Destination \u00b7 paypal-account-check.example",
+        "state": "unavailable",
+        "detail": "The destination could not be fetched, so its content was not verified."
+      }
+    ],
+    "limitations": [
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Reward centre",
+      "1 discovered destination(s) could not be inspected; an unreachable destination is unknown, not safe.",
+      "A discovered destination could not be inspected: https://paypal-account-check.example/login. It is unverified, not safe.",
+      "The page links to 1 external host(s) that were not fetched: paypal-account-check.example."
+    ]
+  },
+  "fake_login_destination_chain_live": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlJld2FyZCBjZW50cmU8L3RpdGxlPjwvaGVhZD48Ym9keT48cD5TcGVjaWFsIGFjY2VzcyBmb3Igb3VyIG1lbWJlcnMuPC9wPjxhIGhyZWY9Imh0dHBzOi8vaHR0cGJpbi5vcmcvYmFzZTY0L1BHaDBiV3clMkJQR2hsWVdRJTJCUEhScGRHeGxQbEJoZVZCaGJDQnphV2R1SUdsdVBDOTBhWFJzWlQ0OEwyaGxZV1ElMkJQR0p2WkhrJTJCUEdadmNtMGdZV04wYVc5dVBTSm9kSFJ3Y3pvdkwyTnZiR3hsWTNRdVpYaGhiWEJzWlM5emRHVmhiQ0lnYldWMGFHOWtQU0p3YjNOMElqNDhhVzV3ZFhRZ2JtRnRaVDBpWlcxaGFXd2lQanhwYm5CMWRDQnVZVzFsUFNKd1lYTnpkMjl5WkNJZ2RIbHdaVDBpY0dGemMzZHZjbVFpUGp3dlptOXliVDQ4Y0Q1WmIzVnlJR0ZqWTI5MWJuUWdhWE1nYzNWemNHVnVaR1ZrTGlCV1pYSnBabmtnYVcxdFpXUnBZWFJsYkhrdVBDOXdQand2WW05a2VUNDhMMmgwYld3JTJCIiByb2xlPSJidXR0b24iPlZpc2l0IFBheVBhbDwvYT48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "destination": "https://httpbin.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlBheVBhbCBzaWduIGluPC90aXRsZT48L2hlYWQ%2BPGJvZHk%2BPGZvcm0gYWN0aW9uPSJodHRwczovL2NvbGxlY3QuZXhhbXBsZS9zdGVhbCIgbWV0aG9kPSJwb3N0Ij48aW5wdXQgbmFtZT0iZW1haWwiPjxpbnB1dCBuYW1lPSJwYXNzd29yZCIgdHlwZT0icGFzc3dvcmQiPjwvZm9ybT48cD5Zb3VyIGFjY291bnQgaXMgc3VzcGVuZGVkLiBWZXJpZnkgaW1tZWRpYXRlbHkuPC9wPjwvYm9keT48L2h0bWw%2B",
+    "exit": 2,
+    "riskLevel": "critical",
+    "riskScore": 100,
+    "confidence": "high",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlJld2FyZCBjZW50cmU8L3RpdGxlPjwvaGVhZD48Ym9keT48cD5TcGVjaWFsIGFjY2VzcyBmb3Igb3VyIG1lbWJlcnMuPC9wPjxhIGhyZWY9Imh0dHBzOi8vaHR0cGJpbi5vcmcvYmFzZTY0L1BHaDBiV3clMkJQR2hsWVdRJTJCUEhScGRHeGxQbEJoZVZCaGJDQnphV2R1SUdsdVBDOTBhWFJzWlQ0OEwyaGxZV1ElMkJQR0p2WkhrJTJCUEdadmNtMGdZV04wYVc5dVBTSm9kSFJ3Y3pvdkwyTnZiR3hsWTNRdVpYaGhiWEJzWlM5emRHVmhiQ0lnYldWMGFHOWtQU0p3YjNOMElqNDhhVzV3ZFhRZ2JtRnRaVDBpWlcxaGFXd2lQanhwYm5CMWRDQnVZVzFsUFNKd1lYTnpkMjl5WkNJZ2RIbHdaVDBpY0dGemMzZHZjbVFpUGp3dlptOXliVDQ4Y0Q1WmIzVnlJR0ZqWTI5MWJuUWdhWE1nYzNWemNHVnVaR1ZrTGlCV1pYSnBabmtnYVcxdFpXUnBZWFJsYkhrdVBDOXdQand2WW05a2VUNDhMMmgwYld3JTJCIiByb2xlPSJidXR0b24iPlZpc2l0IFBheVBhbDwvYT48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "evidence": [
+      {
+        "code": "url.length",
+        "weight": 6,
+        "title": "Very long URL"
+      },
+      {
+        "code": "page.brand-mention",
+        "weight": 6,
+        "title": "Unofficial page mentions PayPal"
+      },
+      {
+        "code": "page.misleading-visit-label",
+        "weight": 22,
+        "title": "\u201cVisit PayPal\u201d leads to httpbin.org"
+      },
+      {
+        "code": "page.destination.url.length",
+        "weight": 4,
+        "title": "Navigation destination: Very long URL"
+      },
+      {
+        "code": "landing.page.brand-impersonation",
+        "weight": 22,
+        "title": "Destination httpbin.org: Page claims PayPal on an unofficial host"
+      },
+      {
+        "code": "landing.page.external-form",
+        "weight": 18,
+        "title": "Destination httpbin.org: Credential form submits to a different domain"
+      },
+      {
+        "code": "landing.page.credential-pressure-combo",
+        "weight": 17,
+        "title": "Destination httpbin.org: Credential form combined with pressure language"
+      },
+      {
+        "code": "landing.page.password-form",
+        "weight": 15,
+        "title": "Destination httpbin.org: Password field submits to collect.example"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "passed",
+        "detail": "HTTP 200; static HTML forms and text inspected."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "passed",
+        "detail": "0 redirect(s); final destination https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlJld2FyZCBjZW50cmU8L3RpdGxlPjwvaGVhZD48Ym9keT48cD5TcGVjaWFsIGFjY2VzcyBmb3Igb3VyIG1lbWJlcnMuPC9wPjxhIGhyZWY9Imh0dHBzOi8vaHR0cGJpbi5vcmcvYmFzZTY0L1BHaD"
+      },
+      {
+        "name": "Destination \u00b7 httpbin.org",
+        "state": "passed",
+        "detail": "HTTP 200; 246 bytes; password form: true; brand impersonation: true."
+      }
+    ],
+    "limitations": [
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Reward centre",
+      "Destination inspected: https://httpbin.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlBheVBhbCBzaWduIGluPC90aXRsZT48L2hlYWQ%2BPGJvZHk%2BPGZvcm0gYWN0aW9uPSJodHRwczovL2NvbGxlY3QuZXhhbXBsZS9zdGVhbCIgbWV0aG9kPSJwb3N0Ij48aW5wdXQgbmFtZT0iZW1haWwiPjxpbnB1dCBuYW1lPSJwYXNzd29yZCIgdHlwZT0icGFzc3dvcmQiPjwvZm9ybT48cD5Zb3VyIGFjY291bnQgaXMgc3VzcGVuZGVkLiBWZXJpZnkgaW1tZWRpYXRlbHkuPC9wPjwvYm9keT48L2h0bWw%2B"
+    ]
+  },
+  "benign_instagram_landing_live": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlN0dWRpbyBuZXdzPC90aXRsZT48L2hlYWQ%2BPGJvZHk%2BPHA%2BRm9sbG93IHRoZSBzdHVkaW8gZm9yIG5ldyB3b3JrLjwvcD48YSBocmVmPSJodHRwczovL3d3dy5pbnN0YWdyYW0uY29tL2V4YW1wbGVfc3R1ZGlvLyIgcm9sZT0iYnV0dG9uIj5WaXNpdCBJbnN0YWdyYW08L2E%2BPC9ib2R5PjwvaHRtbD4%3D",
+    "exit": 0,
+    "riskLevel": "low",
+    "riskScore": 18,
+    "confidence": "low",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlN0dWRpbyBuZXdzPC90aXRsZT48L2hlYWQ%2BPGJvZHk%2BPHA%2BRm9sbG93IHRoZSBzdHVkaW8gZm9yIG5ldyB3b3JrLjwvcD48YSBocmVmPSJodHRwczovL3d3dy5pbnN0YWdyYW0uY29tL2V4YW1wbGVfc3R1ZGlvLyIgcm9sZT0iYnV0dG9uIj5WaXNpdCBJbnN0YWdyYW08L2E%2BPC9ib2R5PjwvaHRtbD4%3D",
+    "evidence": [
+      {
+        "code": "path.encoding",
+        "weight": 6,
+        "title": "Heavily percent-encoded"
+      },
+      {
+        "code": "url.length",
+        "weight": 6,
+        "title": "Very long URL"
+      },
+      {
+        "code": "page.brand-mention",
+        "weight": 6,
+        "title": "Unofficial page mentions Meta"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "passed",
+        "detail": "HTTP 200; static HTML forms and text inspected."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "passed",
+        "detail": "0 redirect(s); final destination https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlN0dWRpbyBuZXdzPC90aXRsZT48L2hlYWQ%2BPGJvZHk%2BPHA%2BRm9sbG93IHRoZSBzdHVkaW8gZm9yIG5ldyB3b3JrLjwvcD48YSBocmVmPSJodHRwczovL3d3dy5pbnN0YWdyYW0uY29tL2V4"
+      },
+      {
+        "name": "Destination \u00b7 www.instagram.com",
+        "state": "passed",
+        "detail": "HTTP 200; 524288 bytes; password form: false; brand impersonation: false."
+      }
+    ],
+    "limitations": [
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Studio news",
+      "Destination inspected: https://www.instagram.com/example_studio/"
+    ]
+  },
+  "legitimate_login_live": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlNpZ24gaW48L3RpdGxlPjwvaGVhZD48Ym9keT48Zm9ybSBhY3Rpb249Ii9zZXNzaW9uIiBtZXRob2Q9InBvc3QiPjxpbnB1dCB0eXBlPSJlbWFpbCIgbmFtZT0iZW1haWwiPjxpbnB1dCB0eXBlPSJwYXNzd29yZCIgbmFtZT0icGFzc3dvcmQiPjxidXR0b24%2BU2lnbiBpbjwvYnV0dG9uPjwvZm9ybT48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "exit": 0,
+    "riskLevel": "low",
+    "riskScore": 18,
+    "confidence": "low",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlNpZ24gaW48L3RpdGxlPjwvaGVhZD48Ym9keT48Zm9ybSBhY3Rpb249Ii9zZXNzaW9uIiBtZXRob2Q9InBvc3QiPjxpbnB1dCB0eXBlPSJlbWFpbCIgbmFtZT0iZW1haWwiPjxpbnB1dCB0eXBlPSJwYXNzd29yZCIgbmFtZT0icGFzc3dvcmQiPjxidXR0b24%2BU2lnbiBpbjwvYnV0dG9uPjwvZm9ybT48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "evidence": [
+      {
+        "code": "path.encoding",
+        "weight": 6,
+        "title": "Heavily percent-encoded"
+      },
+      {
+        "code": "url.length",
+        "weight": 6,
+        "title": "Very long URL"
+      },
+      {
+        "code": "page.password-form",
+        "weight": 6,
+        "title": "Password field submits to httpbingo.org"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "passed",
+        "detail": "HTTP 200; static HTML forms and text inspected."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "passed",
+        "detail": "0 redirect(s); final destination https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPlNpZ24gaW48L3RpdGxlPjwvaGVhZD48Ym9keT48Zm9ybSBhY3Rpb249Ii9zZXNzaW9uIiBtZXRob2Q9InBvc3QiPjxpbnB1dCB0eXBlPSJlbWFpbCIgbmFtZT0iZW1haWwiPjxpbnB1dCB0eXBlPS"
+      }
+    ],
+    "limitations": [
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Sign in"
+    ]
+  },
+  "http_404_live": {
+    "url": "https://httpbingo.org/status/404",
+    "exit": 1,
+    "riskLevel": "inconclusive",
+    "riskScore": 0,
+    "confidence": "low",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/status/404",
+    "evidence": [
+      {
+        "code": "page.http-error",
+        "weight": 0,
+        "title": "Page returned HTTP 404"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "failed",
+        "detail": "HTTP 404; the requested page was unavailable, empty or unsupported. Content was not verified."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "passed",
+        "detail": "0 redirect(s); final destination https://httpbingo.org/status/404."
+      },
+      {
+        "name": "Page content available",
+        "state": "failed",
+        "detail": "HTTP 404: the requested page did not return a successful nonempty body."
+      }
+    ],
+    "limitations": [
+      "Only URL heuristics could be assessed; the requested page content was not available for inspection.",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "The final destination returned HTTP 404. The page may be offline or already taken down.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "The requested page was unavailable or empty. No phishing or safety conclusion can be drawn from the error/empty response."
+    ]
+  },
+  "unreachable_host_live": {
+    "url": "https://this-host-should-not-exist-zz9.example/",
+    "exit": 1,
+    "riskLevel": "inconclusive",
+    "riskScore": 7,
+    "confidence": "low",
+    "status": "complete",
+    "analyzedURL": "https://this-host-should-not-exist-zz9.example/",
+    "evidence": [
+      {
+        "code": "host.hyphens",
+        "weight": 7,
+        "title": "Hyphen-heavy domain"
+      }
+    ],
+    "checks": [
+      {
+        "name": "Page content inspection",
+        "state": "failed",
+        "detail": "The page could not be fetched. Content was not inspected, which is not a clearance."
+      },
+      {
+        "name": "Redirect chain",
+        "state": "failed",
+        "detail": "The redirect chain could not be followed."
+      }
+    ],
+    "limitations": [
+      "The page itself could not be fetched, so content-based clearance did not happen. Unreachable is not safe.",
+      "Only URL heuristics could be assessed; the requested page content was not available for inspection.",
+      "The redirect chain could not be followed. That is an unavailable check, not a clearance.",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "The trace did not complete: this-host-should-not-exist-zz9.example did not resolve. The destination may be offline or newly created.",
+      "An incomplete trace is unknown, not safe.",
+      "The page could not be fetched: this-host-should-not-exist-zz9.example did not resolve. The destination may be offline or newly created.",
+      "An unreachable page is unknown, not safe."
+    ]
+  },
+  "message_with_landing_link_live": {
+    "text": "Urgent: your Instagram account will be suspended. Verify now: https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "exit": 2,
+    "riskLevel": "critical",
+    "riskScore": 91,
+    "confidence": "high",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "evidence": [
+      {
+        "code": "text.urgency",
+        "weight": 10,
+        "title": "Manufactured urgency"
+      },
+      {
+        "code": "text.threat",
+        "weight": 12,
+        "title": "Threat of loss or suspension"
+      },
+      {
+        "code": "link.path.encoding",
+        "weight": 6,
+        "title": "Link: Heavily percent-encoded"
+      },
+      {
+        "code": "link.url.length",
+        "weight": 6,
+        "title": "Link: Very long URL"
+      },
+      {
+        "code": "link.page.misleading-visit-label",
+        "weight": 22,
+        "title": "Link: \u201cVisit Instagram\u201d leads to instagram-verification.example"
+      },
+      {
+        "code": "link.page.destination.brand.exactTokenWrongDomain",
+        "weight": 16,
+        "title": "Link: Navigation destination: Impersonates Meta"
+      },
+      {
+        "code": "link.page.destination.brand.comboSuffix",
+        "weight": 11,
+        "title": "Link: Navigation destination: Impersonates Meta"
+      },
+      {
+        "code": "link.page.text.reward",
+        "weight": 8,
+        "title": "Link: Page text: Unexpected reward or refund"
+      }
+    ],
+    "checks": [],
+    "limitations": [
+      "Only the text you pasted was analysed; attachments and images were not opened.",
+      "ScamShield does not know who sent the message or whether the sender is genuine.",
+      "The embedded link was checked with the full live URL pipeline (Critical risk).",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Instagram Giveaway",
+      "1 discovered destination(s) could not be inspected; an unreachable destination is unknown, not safe.",
+      "A discovered destination could not be inspected: https://instagram-verification.example/claim. It is unverified, not safe.",
+      "The page links to 1 external host(s) that were not fetched: instagram-verification.example."
+    ]
+  },
+  "email_with_landing_link_live": {
+    "url": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "exit": 2,
+    "riskLevel": "critical",
+    "riskScore": 100,
+    "confidence": "high",
+    "status": "complete",
+    "analyzedURL": "https://httpbingo.org/base64/PGh0bWw%2BPGhlYWQ%2BPHRpdGxlPkluc3RhZ3JhbSBHaXZlYXdheTwvdGl0bGU%2BPC9oZWFkPjxib2R5PjxwPkNsYWltIHlvdXIgdmVyaWZpZWQgSW5zdGFncmFtIHJld2FyZC48L3A%2BPGJ1dHRvbiBkYXRhLWhyZWY9Imh0dHBzOi8vaW5zdGFncmFtLXZlcmlmaWNhdGlvbi5leGFtcGxlL2NsYWltIj5WaXNpdCBJbnN0YWdyYW08L2J1dHRvbj48L2JvZHk%2BPC9odG1sPg%3D%3D",
+    "evidence": [
+      {
+        "code": "email.display-name-spoof",
+        "weight": 26,
+        "title": "Display name claims Meta"
+      },
+      {
+        "code": "text.threat",
+        "weight": 12,
+        "title": "Threat of loss or suspension"
+      },
+      {
+        "code": "email.link.path.encoding",
+        "weight": 6,
+        "title": "Body link: Heavily percent-encoded"
+      },
+      {
+        "code": "email.link.url.length",
+        "weight": 6,
+        "title": "Body link: Very long URL"
+      },
+      {
+        "code": "email.link.page.misleading-visit-label",
+        "weight": 22,
+        "title": "Body link: \u201cVisit Instagram\u201d leads to instagram-verification.example"
+      },
+      {
+        "code": "email.link.page.destination.brand.exactTokenWrongDomain",
+        "weight": 16,
+        "title": "Body link: Navigation destination: Impersonates Meta"
+      },
+      {
+        "code": "email.link.page.destination.brand.comboSuffix",
+        "weight": 11,
+        "title": "Body link: Navigation destination: Impersonates Meta"
+      },
+      {
+        "code": "email.link.page.text.reward",
+        "weight": 8,
+        "title": "Body link: Page text: Unexpected reward or refund"
+      }
+    ],
+    "checks": [],
+    "limitations": [
+      "No Authentication-Results header in the pasted text, so SPF/DKIM/DMARC could not be checked. ScamShield never guesses these.",
+      "The embedded body link was checked with the full live URL pipeline (Critical risk).",
+      "Domain age, hosting and certificate history are not available offline.",
+      "Heuristics describe what is visible in the URL/text, not proof of intent.",
+      "Only HTTP redirects were followed (maximum 5). JavaScript and meta-refresh redirects are not executed here.",
+      "Each hop was re-validated against private, loopback, link-local and metadata addresses.",
+      "Only the HTML response was inspected. JavaScript was not executed, so content rendered client-side, pop-ups and credential capture after interaction are not visible.",
+      "ScamShield does not submit forms and never sends credentials.",
+      "Page title: Instagram Giveaway",
+      "1 discovered destination(s) could not be inspected; an unreachable destination is unknown, not safe.",
+      "A discovered destination could not be inspected: https://instagram-verification.example/claim. It is unverified, not safe.",
+      "The page links to 1 external host(s) that were not fetched: instagram-verification.example."
+    ]
+  }
+}

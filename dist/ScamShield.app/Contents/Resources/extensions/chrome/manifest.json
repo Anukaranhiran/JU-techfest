@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "ScamShield",
+  "version": "1.0.0",
+  "description": "Checks navigations against the local ScamShield scanner and blocks high-risk destinations before they render.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "webNavigation",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ScamShield",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["block.html", "block.js", "style.css"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}

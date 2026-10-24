@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>ScamShield</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <strong style="font-size:15px">ScamShield</strong>
+      <span id="status" class="badge" style="margin-left:auto">checking…</span>
+    </div>
+    <p class="muted" id="statusDetail">Looking for the local ScamShield app.</p>
+
+    <hr>
+
+    <label for="port">Local API port</label>
+    <input id="port" type="number" min="1024" max="65535" placeholder="47613">
+
+    <label for="token">Access token</label>
+    <input id="token" type="password" placeholder="Paste from ScamShield › Settings">
+
+    <div class="actions">
+      <button id="save" class="primary">Save &amp; test</button>
+      <button id="scan" class="ghost">Scan this tab</button>
+    </div>
+
+    <div id="result"></div>
+
+    <hr>
+    <p class="muted" style="font-size:11px">
+      Scans run on your Mac against the ScamShield app. Nothing is sent to a server.
+      High-risk navigations are blocked; known-bad hosts are redirected before the page loads.
+    </p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
